@@ -119,11 +119,40 @@ bash: lpopopos: command not found
 ===================================TASK4==========================================
 
 
-fff
+vlad@dell ~/Yulia/GL-BaseCamp-2020 $ touch task4
+
+vlad@dell ~/Yulia/GL-BaseCamp-2020 $ ls -la
+итого 20
+drwxr-xr-x 3 vlad vlad 4096 Ноя  1 19:57 .
+drwxr-xr-x 3 vlad vlad 4096 Ноя  1 19:55 ..
+drwxr-xr-x 8 vlad vlad 4096 Ноя  1 19:57 .git
+-rw-r--r-- 1 vlad vlad 4572 Ноя  1 19:56 solution
+-rw-r--r-- 1 vlad vlad    0 Ноя  1 19:57 task4
+
+vlad@dell ~/Yulia/GL-BaseCamp-2020 $ sudo chown root task4
+[sudo] пароль для vlad: 
+
+vlad@dell ~/Yulia/GL-BaseCamp-2020 $ ls -la
+итого 20
+drwxr-xr-x 3 vlad vlad 4096 Ноя  1 19:57 .
+drwxr-xr-x 3 vlad vlad 4096 Ноя  1 19:55 ..
+drwxr-xr-x 8 vlad vlad 4096 Ноя  1 19:57 .git
+-rw-r--r-- 1 vlad vlad 4572 Ноя  1 19:56 solution
+-rw-r--r-- 1 root vlad    0 Ноя  1 19:57 task4
+
+
+vlad@dell ~/Yulia/GL-BaseCamp-2020 $ sudo chmod +x task4 
+
+vlad@dell ~/Yulia/GL-BaseCamp-2020 $ ls -la
+итого 20
+drwxr-xr-x 3 vlad vlad 4096 Ноя  1 19:57 .
+drwxr-xr-x 3 vlad vlad 4096 Ноя  1 19:55 ..
+drwxr-xr-x 8 vlad vlad 4096 Ноя  1 19:57 .git
+-rw-r--r-- 1 vlad vlad 4572 Ноя  1 19:56 solution
+-rwxr-xr-x 1 root vlad    0 Ноя  1 19:57 task4
 
 
 ===================================TASK5==========================================
-
 
 
 Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
