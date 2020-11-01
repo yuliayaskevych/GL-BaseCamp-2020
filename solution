@@ -1,0 +1,72 @@
+
+Yulia_Yaskevych@Yulia MINGW64 /
+$ cd d:/gl/GL-BaseCamp-2020
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (main)
+$ git checkout -b hw1
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw1)
+$ touch solution
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw1)
+$ touch work
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw1)
+$ git add .
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw1)
+$ vim work
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw1)
+$ git commit -m "add text in work file"
+[hw1 cac25fe] add text in work file
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 solution
+ create mode 100644 work
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw1)
+$ git commit
+On branch hw1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   work
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw1)
+$ git rm --cached work
+rm 'work'
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw1)
+$ git commit
+On branch hw1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   solution
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        work
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw1)
+$ git commit -m "RM file"
+[hw1 d68104e] RM file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 work
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw1)
+$ code solution
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw1)
+$ git push
+fatal: The current branch hw1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin hw1
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw1)
+$ git push --set-upstream origin hw1
