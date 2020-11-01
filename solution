@@ -1,0 +1,172 @@
+===================================TASK1==========================================
+Yulia_Yaskevych@Yulia MINGW64 /
+$ cd d:/gl/GL-BaseCamp-2020
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (main)
+$ git checkout -b hw3
+Switched to a new branch 'hw3'
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ touch solution
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ code solution
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ ls
+solution
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ mkdir -p f1/f2/f3/f4/f5/f6
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ ls
+f1/  solution
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ cd f1
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020/f1 (hw3)
+$ touch text.txt
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020/f1 (hw3)
+$ vim text.txt
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020/f1 (hw3)
+$ cp text.txt f2/f3/f4/f5/f6
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020/f1 (hw3)
+$ cd f2/f3/f4/f5/f6
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020/f1/f2/f3/f4/f5/f6 (hw3)
+$ ls
+text.txt
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020/f1/f2/f3/f4/f5/f6 (hw3)
+$ cd~
+bash: cd~: command not found
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020/f1/f2/f3/f4/f5/f6 (hw3)
+$ cd ~
+
+Yulia_Yaskevych@Yulia MINGW64 ~
+$ pwd
+/c/Users/Yulia_Yaskevych
+
+Yulia_Yaskevych@Yulia MINGW64 ~
+$ find /d/gl -iname text.txt
+/d/gl/GL-BaseCamp-2020/f1/f2/f3/f4/f5/f6/text.txt
+/d/gl/GL-BaseCamp-2020/f1/text.txt
+
+Yulia_Yaskevych@Yulia MINGW64 ~
+$ rm /d/gl/GL-BaseCamp-2020/f1/f2/f3/f4/f5/f6/text.txt
+
+Yulia_Yaskevych@Yulia MINGW64 ~
+$ find /d/gl -iname text.txt
+/d/gl/GL-BaseCamp-2020/f1/text.txt
+
+
+===================================TASK2==========================================
+
+
+Yulia_Yaskevych@Yulia MINGW64 /
+$ cd d:/gl/GL-BaseCamp-2020
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ ls
+f1/  solution
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ ls 2> error.txt
+error.txt  f1/  solution
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ ls
+error.txt  f1/  solution
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ cat error.txt
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ lsqwed 2> error.txt
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ cat error.txt
+bash: lsqwed: command not found
+
+
+===================================TASK3==========================================
+
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ ls > everything.txt 2>&1
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ cat everything.txt
+error.txt
+everything.txt
+f1/
+solution
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ lpopopos > everything.txt 2>&1
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ cat everything.txt
+bash: lpopopos: command not found
+
+
+===================================TASK4==========================================
+
+
+fff
+
+
+===================================TASK5==========================================
+
+
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ bad_cmd || echo "cmd2 run"
+bash: bad_cmd: command not found
+cmd2 run
+
+
+===================================TASK6==========================================
+
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ bad_cmd && echo "cmd2 run"
+bash: bad_cmd: command not found
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ ls && echo "cmd2 run"
+error.txt  everything.txt  f1/  solution  task4
+cmd2 run
+
+
+===================================TASK7==========================================
+
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ touch task7.sh
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ echo "ls -la" > task7.sh
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ cat task7.sh
+ls -la
+
+Yulia_Yaskevych@Yulia MINGW64 /d/gl/GL-BaseCamp-2020 (hw3)
+$ sh task7.sh
+total 15
+drwxr-xr-x 1 Yulia_Yaskevych 197121    0 ноя  1 19:35 .
+drwxr-xr-x 1 Yulia_Yaskevych 197121    0 окт 30 12:50 ..
+drwxr-xr-x 1 Yulia_Yaskevych 197121    0 ноя  1 18:37 .git
+-rw-r--r-- 1 Yulia_Yaskevych 197121   32 ноя  1 19:10 error.txt
+-rw-r--r-- 1 Yulia_Yaskevych 197121   34 ноя  1 19:16 everything.txt
+drwxr-xr-x 1 Yulia_Yaskevych 197121    0 ноя  1 18:44 f1
+-rw-r--r-- 1 Yulia_Yaskevych 197121 1721 ноя  1 19:03 solution
+-rw-r--r-- 1 Yulia_Yaskevych 197121    0 ноя  1 19:21 task4
+-rw-r--r-- 1 Yulia_Yaskevych 197121    7 ноя  1 19:36 task7.sh
