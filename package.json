@@ -1,0 +1,23 @@
+{
+  "name": "gl-basecamp-2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/test1.js && node tests/test2.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuliayaskevych/GL-BaseCamp-2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuliayaskevych/GL-BaseCamp-2020/issues"
+  },
+  "homepage": "https://github.com/yuliayaskevych/GL-BaseCamp-2020#readme",
+  "devDependencies": {
+    "chromedriver": "^86.0.0",
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  }
+}
