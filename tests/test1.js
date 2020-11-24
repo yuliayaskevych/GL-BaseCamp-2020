@@ -1,19 +1,20 @@
-const { Builder, By, until, Key } = require('selenium-webdriver');
+const { Builder } = require('selenium-webdriver');
 
-(async function example() {
-    const driver = await new Builder().forBrowser('chrome').build();
+const GLCareersPage = require('../pageObject/GLCareersPage');
 
+(async function () {
+    //const driver = await new Builder().forBrowser('chrome').build();
+    const driver = await new Builder().forBrowser('firefox').build();
+
+    const careersPage = new GLCareersPage(driver);
     try {
-        await driver.get('https://www.google.com');
-        await driver.findElement(By.name('q')).sendKeys('selenium install ubuntu python', Key.RETURN);
-        await driver.wait(until.elementLocated(By.id('search')));
-        await driver.findElement(By.partialLinkText('pypi.org')).click();
-        await driver.findElement(By.id('search')).sendKeys('selenium', Key.RETURN);
-        await (await driver.findElement(By.css('[aria-label="Search results"] li:nth-child(2)'))).click();
+        await careersPage.open();
+        await careersPage.searchVacancy('QA');
+        console.log('test 1: ', await careersPage.getFirst());
     } catch (e) {
-        console.log(e);
+        console.error(e);
     }
     finally {
         await driver.quit();
     }
-})();
+})()

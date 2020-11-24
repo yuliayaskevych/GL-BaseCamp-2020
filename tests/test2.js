@@ -1,16 +1,15 @@
-const { Builder, By, until, Key } = require('selenium-webdriver');
+const { Builder } = require('selenium-webdriver');
 
-(async function example() {
-    const driver = await new Builder().forBrowser('chrome').build();
+const GLCareersResultPage = require('../pageObject/GLCareersResultPage');
 
+(async function () {
+    const driver = await new Builder().forBrowser('firefox').build();
+    const resultPage = new GLCareersResultPage(driver);
     try {
-        await driver.get('https://www.globallogic.com/ua/careers/');
-        await driver.wait(until.elementLocated(By.id('by_keyword')));
-        await driver.findElement(By.id('by_keyword')).sendKeys('QA', Key.RETURN);
-        await driver.wait(until.elementLocated(By.id('carersearchpage')));
-        console.log(await driver.findElement(By.css('#carersearchpage .career-pagelink p')).getText());
+        await resultPage.open('QA');
+        console.log('test 2: ', await resultPage.getFirst());
     } catch (e) {
-        console.log(e);
+        console.log(e)
     }
     finally {
         await driver.quit();
