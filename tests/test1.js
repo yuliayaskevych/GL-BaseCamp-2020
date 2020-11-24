@@ -3,7 +3,6 @@ const { Builder } = require('selenium-webdriver');
 const GLCareersPage = require('../pageObject/GLCareersPage');
 
 (async function () {
-    //const driver = await new Builder().forBrowser('chrome').build();
     const driver = await new Builder().forBrowser('firefox').build();
 
     const careersPage = new GLCareersPage(driver);

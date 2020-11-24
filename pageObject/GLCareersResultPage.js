@@ -1,19 +1,18 @@
 const { Builder, By, until, Key } = require('selenium-webdriver');
 
 const BasePage = require('./BasePage');
+const config = require('./config');
 
 class GLCareersResultPage extends BasePage {
-    SEARCH_RESULT = (By.css('#carersearchpage .career-pagelink p'));
-    COOKIE_ALLOW_ALL_BUTTON = (By.id('CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll'));
 
     constructor(browser) {
         super(browser);
     }
 
     async open(byKeyword) {
-        await this.pageOpen(`https://www.globallogic.com/ua/career-search-page/?keywords=${byKeyword}&experience=&locations=&c=`, true);
+        await this.pageOpen(`${config.URL_CAREER}${byKeyword}`, true);
         try {
-            await this.click(this.COOKIE_ALLOW_ALL_BUTTON);
+            await this.click(config.COOKIE_ALLOW_ALL_BUTTON);
         }
         catch (e) {
             console.log('cookie is not present')
@@ -21,7 +20,7 @@ class GLCareersResultPage extends BasePage {
     }
 
     async getFirst() {
-        return await this.getText(this.SEARCH_RESULT);
+        return await this.getText(config.SEARCH_RESULT);
     }
 }
 
